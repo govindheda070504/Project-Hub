@@ -5,7 +5,7 @@ const User = require('../modules/user');
 const { getRepoTopics, filterTechnologyKeywords } = require('../modules/keywords');
 const router = express.Router();
 
-const JWT_SECRET = "8704704ffc40e8803fd6491cbc7da3d25ae4cdd08c7ad1a8799239e0ef2268eea09a60eaf8685d860f770255a140f778a6e7ec8ec6b58b3e011a518017003304"; 
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Helper function to parse GitHub URL for owner and repo, supporting URLs with or without .git extension
 const parseGitHubURL = (url) => {
