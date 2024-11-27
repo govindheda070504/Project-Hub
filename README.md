@@ -14,3 +14,5 @@ Styling: CSS
 API Integration: Axios
 
 Authentication: JWT (JSON Web Tokens)
+
+
