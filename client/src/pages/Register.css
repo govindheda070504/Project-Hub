@@ -1,0 +1,171 @@
+body {
+  background-color: #161b22; /* GitHub-like dark grey */
+  background-image: 
+  linear-gradient(to bottom, #161b22, #0d1117);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #c9d1d9;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Full-screen loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Make sure it covers the entire viewport width */
+  height: 100vh; /* Make sure it covers the entire viewport height */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999; 
+  
+  
+  
+
+
+
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+.loading-screen h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.loading-screen p {
+  font-size: 18px;
+}
+
+/* Register container styles */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  height: 100vh; /* Ensure it takes up the entire viewport height */
+  background-color: transparent; /* Make the container's background transparent */
+  position: relative; /* Allow the loading screen to overlay */
+  z-index: 1; /* Ensure the form is beneath the loading screen */
+}
+
+/* Form wrapper remains unchanged */
+.register-form-wrapper {
+  background: rgba(22, 27, 34, 0.75); /* Semi-transparent background for frosted effect */
+  backdrop-filter: blur(10px); /* Adds the blur effect */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4); /* Soft shadow */
+  position: relative;
+  margin-top: 100px;
+  width: 400px;
+  transition: backdrop-filter 0.3s ease;
+}
+
+.register-form h1 {
+  text-align: center;
+  color: #58a6ff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.form-field {
+  margin-bottom: 15px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.form-field input, .form-field select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(13, 17, 23, 0.7); /* Semi-transparent input background */
+  color: #c9d1d9;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-field input:hover, .form-field select:hover {
+  background-color: rgba(13, 17, 23, 0.9); /* Darker hover effect */
+}
+
+.form-field input:focus, .form-field select:focus {
+  outline: none;
+  background-color: rgba(13, 17, 23, 1); /* Stronger focus color */
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.8); /* Glowing effect on focus */
+}
+
+/* Center and style the register button */
+button.register-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #238636;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 20px 0; /* Add padding between button and elements */
+}
+
+button.register-btn:hover {
+  background-color: #2ea043;
+  transform: scale(1.05);
+}
+
+button.register-btn:focus {
+  outline: none;
+}
+
+/* Remove underline on hover */
+.recruiter-link a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.recruiter-link a:hover {
+  text-decoration: none; /* Prevent underline on hover */
+}
+
+.register-form-wrapper:hover h1 {
+  color: #2ea043;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-form-wrapper {
+    margin-top: 50px; /* Adjust margin for smaller screens */
+    width: 90%; /* Ensures the form is responsive on mobile devices */
+  }
+}
+
+.decorative-image {
+  position: absolute;
+  opacity: 0.1; /* Subtle transparency */
+  z-index: -1; /* Behind the form */
+}
+
+.image1 {
+  top: 10px;
+  left: 20px;
+  width: 150px;
+  content: url("../images/image-1.jpg"); /* Update path if needed */
+}

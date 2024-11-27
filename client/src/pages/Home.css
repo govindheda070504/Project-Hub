@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Hero Section */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  width: 100%;
+  height: 80vh;
+  padding: 20px 50px;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+/* Hero Section */
+.glowing-text {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff; /* White text color */
+  text-shadow: 0 0 10px rgba(211, 211, 211, 0.7), 0 0 20px rgba(211, 211, 211, 0.6), 0 0 30px rgba(211, 211, 211, 0.5), 0 0 40px rgba(211, 211, 211, 0.4); /* Light grey glow */
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.glowing-text:hover {
+  color: #fff; /* Keep the white text color on hover */
+  text-shadow: 0 0 15px rgba(211, 211, 211, 1), 0 0 25px rgba(211, 211, 211, 0.9), 0 0 40px rgba(211, 211, 211, 0.8), 0 0 60px rgba(211, 211, 211, 0.7); /* Enhanced light grey glow on hover */
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  animation: rotateImage 10s linear infinite;
+}
+
+.hero-btn {
+  position: relative;
+  z-index: 10;
+  background-color: #27d942;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.7; /* Button starts with lower opacity */
+}
+
+.hero-btn:hover {
+  background-color: #00d11f;
+  opacity: 1; /* Full opacity on hover */
+}
+
+/* About Section */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-img {
+  width: 100%;
+  animation: zoomIn 1.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.left-grid,
+.right-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-sub {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00FF26;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgb(233, 233, 233);
+}
+
+/* How to Use Section */
+#how-to-use {
+  padding: 60px 0;
+  background-color: #111;
+  margin-bottom: 80px; /* Added margin to push content above the footer */
+}
+
+.how-to-use-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #00FF26;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Reduced gap */
+  margin-top: 30px;
+  padding: 0 50px;
+  min-height: 300px; /* Reduced minimum height */
+}
+
+.step-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.step-item h4 {
+  font-size: 1.8rem;
+  color: #00FF26;
+  margin-bottom: 15px;
+}
+
+.step-item p {
+  font-size: 16px;
+  color: rgb(233, 233, 233);
+  line-height: 1.8;
+}
+
+/* Footer */
+#footer {
+  background-color: black;
+  padding: 40px 0;
+  position: relative; /* Ensure footer stays at the bottom */
+  z-index: 1;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-items-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-items {
+  font-size: 16px;
+  color: white;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.footer-items:hover {
+  color: #00FF26;
+}
+
+/* Copyrights Section */
+.copyrights {
+  text-align: center;
+  color: #00FF26;
+  margin-top: 40px;
+  font-size: 14px;
+}

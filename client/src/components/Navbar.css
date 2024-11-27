@@ -1,0 +1,71 @@
+/* Navbar Container */
+header {
+    background-color: black;
+    padding: 10px 0;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-brand a {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .nav-items {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: white; /* Ensure text color is white */
+  }
+  
+  /* Underline effect */
+  .nav-items::after {
+    content: '';  /* Line content */
+    position: absolute;
+    bottom: -5px;  /* Distance from text */
+    left: 0;
+    width: 100%;  /* Line width matches the width of the element */
+    height: 2px;
+    background-color: #00FF26;  /* Line color */
+    transform: scaleX(0);  /* Initially no underline */
+    transition: 0.3s ease; /* Smooth transition for line */
+  }
+  
+  .nav-items:hover::after {
+    transform: scaleX(1);  /* Show the underline */
+  }
+  
+  .nav-items:hover {
+    color: #00FF26; /* Change text color on hover */
+  }
+  
+  .nav-items.active {
+    color: #00FF26; /* Active link color */
+  }
+  
